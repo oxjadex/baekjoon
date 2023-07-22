@@ -3,12 +3,6 @@ int main()
 {
 	long long int a, v, b, i, n=0, c=0; 
 	scanf("%lld %lld %lld", &a, &b, &v);
-	while (n<v) {
-		n+=a;
-		c++;
-		if (n>=v) break;
-		else n-=b;
-	}
-	printf("%lld", c);
+	printf("%lld", v%(a-b)==0? v/(a-b)-1:v/(a-b)+1);
 	return 0;
 }
